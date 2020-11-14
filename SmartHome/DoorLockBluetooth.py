@@ -7,7 +7,7 @@ def openDoorLock(client_socket): #manualMode
 
 def selectKey(client_socket):
     client_socket.send("r") #reset-
-    conn = pymysql.connect(host='192.168.225.49', user='root', password='tjdgk7518', db='SmartHome', charset='utf8')
+    conn = pymysql.connect(host='', user='id', password='pwd', db='dbname', charset='utf8')
     curs=conn.cursor(pymysql.cursors.DictCursor)
     sql = "select RfidKey from doorLockKey where model='DL-01'"
     curs.execute(sql)
